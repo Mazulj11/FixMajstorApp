@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="#83000000"
+    android:backgroundTintMode="screen"
+    android:focusable="auto"
+    android:hapticFeedbackEnabled="true"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -11,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
+        android:elevation="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,12 +28,18 @@
             android:id="@+id/openLoginBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Prijava u sustav" />
+            android:backgroundTint="#6A16C9"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/openRegisterBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registracija u sustav" />
+            android:backgroundTint="#0CC4F7"
+            android:text="Sign up"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

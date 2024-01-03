@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="#83000000"
+    android:backgroundTintMode="screen"
+    android:focusable="auto"
+    android:hapticFeedbackEnabled="true"
+    android:visibility="visible"
     tools:context=".LoginActivity">
 
     <androidx.cardview.widget.CardView
@@ -55,7 +61,7 @@
                     android:layout_width="244dp"
                     android:layout_height="86dp"
                     android:ems="10"
-                    android:hint="Unesite email za prijavu"
+                    android:hint="Enter email"
                     android:inputType="textEmailAddress" />
 
             </LinearLayout>
@@ -77,7 +83,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="94dp"
                     android:ems="10"
-                    android:hint="Unesite lozinku za prijavu"
+                    android:hint="Enter password"
                     android:inputType="textPassword" />
             </LinearLayout>
 
@@ -85,9 +91,11 @@
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Prijava na sustav"
+                android:text="Login"
                 app:cornerRadius="20sp" />
+
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

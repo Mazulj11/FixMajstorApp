@@ -22,17 +22,13 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        // Polja za unos podataka
         EditText registerEmailTxt = findViewById(R.id.registerEmailTxt);
         EditText registerPasswordTxt = findViewById(R.id.registerPasswordTxt);
         EditText registerPasswordCnfTxt = findViewById(R.id.registerPasswordCnfTxt);
-        // Gumb za registraciju
         Button registerBtn = findViewById(R.id.registerBtn);
-        // Što se događa nakon klika
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Dohvaćanje podataka
                 String email = registerEmailTxt.getText().toString();
                 String password = registerPasswordTxt.getText().toString();
                 String passwordCnf = registerPasswordCnfTxt.getText().toString();
@@ -47,7 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 registerPasswordCnfTxt.setText("");
                                 Toast.makeText(
                                         getApplicationContext(),
-                                        "Uspješno ste napravili račun.",
+                                        "You have successfully created an account.",
                                         Toast.LENGTH_LONG
                                 ).show();
                             }
@@ -56,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(
                             getApplicationContext(),
-                            "Greška prilikom unosa ",
+                            "Input error",
                             Toast.LENGTH_LONG
                     ).show();
                 }

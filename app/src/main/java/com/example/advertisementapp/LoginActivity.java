@@ -35,17 +35,17 @@ public class LoginActivity extends AppCompatActivity {
                 String email = loginEmailTxt.getText().toString();
                 String password = loginPasswordTxt.getText().toString();
                 if (email.equals("") && password.equals("")) {
-                    Toast.makeText(getBaseContext(), "Morate unjeti sva polja.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(), "All fields required", Toast.LENGTH_SHORT).show();
                 } else {
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(getBaseContext(), "Prijavili ste se na sustav, dobrodošli.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getBaseContext(), "Welcome, You are login", Toast.LENGTH_SHORT).show();
 //                                Intent movieIntent = new Intent(LoginActivity.this, MovieActivity.class);
 //                                startActivity(movieIntent);
                             } else {
-                                Toast.makeText(getBaseContext(), "Pogrešni korisnički podaci.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getBaseContext(), "Incorrect user data.", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
