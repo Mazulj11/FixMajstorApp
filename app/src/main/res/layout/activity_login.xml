@@ -13,22 +13,25 @@
     tools:context=".LoginActivity">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="404dp"
-        android:layout_height="483dp"
+        android:layout_width="405dp"
+        android:layout_height="497dp"
         android:layout_margin="20sp"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
+        android:padding="15dp"
+        app:cardBackgroundColor="#CBFFFFFF"
+        app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="30dp"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
+
             android:orientation="vertical"
             android:padding="25sp">
 
@@ -43,55 +46,43 @@
                 android:textAllCaps="true"
                 android:textSize="34sp" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10sp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Login to your account"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#A8000000"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0"
-                    app:srcCompat="@drawable/ic_baseline_verified_user_24" />
 
-                <EditText
-                    android:id="@+id/loginEmailTxt"
-                    android:layout_width="244dp"
-                    android:layout_height="86dp"
-                    android:ems="10"
-                    android:hint="Enter email"
-                    android:inputType="textEmailAddress" />
+            <EditText
+                android:id="@+id/loginEmailTxt"
+                android:layout_width="294dp"
+                android:layout_height="80dp"
+                android:hint="Enter email"
+                android:inputType="textEmailAddress" />
 
-            </LinearLayout>
-
-            <LinearLayout
+            <EditText
+                android:id="@+id/loginPasswordTxt"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0"
-                    app:srcCompat="@drawable/ic_baseline_password_24" />
-
-                <EditText
-                    android:id="@+id/loginPasswordTxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="94dp"
-                    android:ems="10"
-                    android:hint="Enter password"
-                    android:inputType="textPassword" />
-            </LinearLayout>
+                android:layout_height="80dp"
+                android:hint="Enter password"
+                android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:backgroundTint="#6A16C9"
                 android:text="Login"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
                 app:cornerRadius="20sp" />
 
         </LinearLayout>
