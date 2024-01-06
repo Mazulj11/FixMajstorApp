@@ -13,8 +13,8 @@
     tools:context=".RegisterActivity">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="402dp"
-        android:layout_height="564dp"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:padding="15dp"
         app:cardBackgroundColor="#CBFFFFFF"
@@ -25,11 +25,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="373dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:background="#00FFFFFF"
-            android:backgroundTint="#00FFFFFF"
+            android:elevation="8dp"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
@@ -63,7 +64,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="5dp"
                 android:hint="Enter your first name"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 app:layout_constraintBottom_toTopOf="@+id/registerLastNameTxt"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -73,7 +74,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="5dp"
                 android:hint="Enter your last name"
-                android:inputType="textPassword"
+                android:inputType="text"
                 app:layout_constraintBottom_toTopOf="@+id/registerEmailTxt"
                 app:layout_constraintTop_toBottomOf="@+id/registerFirstNameTxt" />
 
@@ -110,7 +111,7 @@
             <Button
                 android:id="@+id/registerBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#0CC4F7"
                 android:text="Sign up"

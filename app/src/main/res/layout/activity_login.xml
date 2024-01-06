@@ -13,27 +13,23 @@
     tools:context=".LoginActivity">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="405dp"
-        android:layout_height="497dp"
-        android:layout_margin="20sp"
-        android:padding="15dp"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         app:cardBackgroundColor="#CBFFFFFF"
         app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-
-            android:orientation="vertical"
-            android:padding="25sp">
+            android:layout_margin="20dp"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView"
@@ -41,10 +37,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
                 android:fontFamily="sans-serif-black"
-                android:text="Advertisment App"
+                android:text="Advertisement App "
                 android:textAlignment="center"
                 android:textAllCaps="true"
-                android:textSize="34sp" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -62,7 +61,7 @@
 
             <EditText
                 android:id="@+id/loginEmailTxt"
-                android:layout_width="294dp"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:hint="Enter email"
                 android:inputType="textEmailAddress" />
@@ -77,7 +76,7 @@
             <Button
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginTop="20sp"
                 android:backgroundTint="#6A16C9"
                 android:text="Login"
