@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AdvertisementApp"
+rootProject.name = "FixMajstorApp"
 include(":app")
  
