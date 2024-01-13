@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#83000000"
-    android:backgroundTintMode="screen"
+    android:background="#EFEDE3"
     android:focusable="auto"
     android:hapticFeedbackEnabled="true"
     android:visibility="visible"
@@ -51,39 +50,39 @@
             android:background="@drawable/rounded_edittext"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:padding="5dp"
+            android:padding="15dp"
             android:textColor="#FFDF2B"
             android:textColorHint="#FFDF2B"
             app:layout_constraintBottom_toTopOf="@+id/registerPasswordTxt"
-            app:layout_constraintTop_toBottomOf="@+id/registerLastNameTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/registerNumberTxt" />
 
         <EditText
-            android:id="@+id/registerFirstNameTxt"
+            android:id="@+id/registerFullNameTxt"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/rounded_edittext"
             android:hint="Ime i prezime"
             android:inputType="text"
-            android:padding="5dp"
+            android:padding="15dp"
             android:textColor="#FFDF2B"
             android:textColorHint="#FFDF2B"
-            app:layout_constraintBottom_toTopOf="@+id/registerLastNameTxt"
+            app:layout_constraintBottom_toTopOf="@+id/registerNumberTxt"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <EditText
-            android:id="@+id/registerLastNameTxt"
+            android:id="@+id/registerNumberTxt"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="5dp"
             android:background="@drawable/rounded_edittext"
             android:hint="Broj mobitela"
-            android:inputType="text"
-            android:padding="5dp"
+            android:inputType="number"
+            android:padding="15dp"
             android:textColor="#FFDF2B"
             android:textColorHint="#FFDF2B"
             app:layout_constraintBottom_toTopOf="@+id/registerEmailTxt"
-            app:layout_constraintTop_toBottomOf="@+id/registerFirstNameTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/registerFullNameTxt" />
 
         <EditText
             android:id="@+id/registerPasswordTxt"
@@ -93,7 +92,7 @@
             android:background="@drawable/rounded_edittext"
             android:hint="Lozinka"
             android:inputType="textPassword"
-            android:padding="5dp"
+            android:padding="15dp"
             android:textColor="#FFDF2B"
             android:textColorHint="#FFDF2B"
             app:layout_constraintBottom_toTopOf="@+id/registerPasswordCnfTxt"
@@ -107,7 +106,7 @@
             android:background="@drawable/rounded_edittext"
             android:hint="Potvrdite lozinku"
             android:inputType="textPassword"
-            android:padding="5dp"
+            android:padding="15dp"
             android:textColor="#FFDF2B"
             android:textColorHint="#FFDF2B"
             app:layout_constraintBottom_toTopOf="@+id/registerBtn"
@@ -121,8 +120,9 @@
             android:backgroundTint="#FFDF2B"
             android:text="Sljedeće"
             android:textColor="#000"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:cornerRadius="10dp"
+            app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registerPasswordCnfTxt" />
     </LinearLayout>

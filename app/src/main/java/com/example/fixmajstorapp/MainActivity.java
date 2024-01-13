@@ -1,4 +1,4 @@
-package com.example.advertisementapp;
+package com.example.fixmajstorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         openRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent registerIntent = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent registerIntent = new Intent(MainActivity.this, RegisterMid.class);
                 startActivity(registerIntent);
             }
         });

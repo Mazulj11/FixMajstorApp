@@ -4,37 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEDE3"
-    android:focusable="auto"
-    android:hapticFeedbackEnabled="true"
-    android:visibility="visible"
-    tools:context=".MainActivity">
+    android:background="#EFEDE3">
 
     <LinearLayout
-        android:layout_width="377dp"
-        android:layout_height="603dp"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:elevation="8dp"
-        android:gravity="center"
+        android:layout_width="365dp"
+        android:layout_height="568dp"
         android:orientation="vertical"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="277dp"
-            android:src="@drawable/logo" />
-
         <TextView
-            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:text="Dobrodošli"
+            android:text="Napravi novi račun"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -44,7 +30,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
@@ -52,31 +37,36 @@
             android:textAlignment="center"
             android:textSize="20sp" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="277dp"
+            android:src="@drawable/logo" />
+
         <Button
             android:id="@+id/openRegisterBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:height="50dp"
-            android:text="Napravi novi račun"
+            android:backgroundTint="#FFDF2B"
+            android:text="Nuditelj usluga"
             android:textColor="#000000"
             android:textStyle="bold"
-            android:backgroundTint="#FFDF2B"
-            app:cornerRadius="15dp" />
+            app:cornerRadius="15dp"
+            tools:ignore="DuplicateIds" />
 
         <Button
-            android:id="@+id/openLoginBtn"
+            android:id="@+id/openRegisterBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:height="50dp"
-            android:backgroundTint="#00FFFFFF"
-            android:text="Prijavi se"
-            android:textColor="#000"
+            android:textColor="#000000"
             android:textStyle="bold"
+            android:backgroundTint="#FFDF2B"
             app:cornerRadius="15dp"
-            app:strokeColor="#000000"
-            app:strokeWidth="3px" />
-    </LinearLayout>
+            android:text="Korisnik usluga"
+            tools:ignore="DuplicateIds"/>
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

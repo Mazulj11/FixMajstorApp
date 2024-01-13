@@ -1,4 +1,4 @@
-package com.example.advertisementapp;
+package com.example.fixmajstorapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +22,8 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        EditText registerFirstNameTxt = findViewById(R.id.registerFirstNameTxt);
-        EditText registerLastNameTxt = findViewById(R.id.registerLastNameTxt);
+        EditText registerFullNameTxt = findViewById(R.id.registerFullNameTxt);
+        EditText registerNumberTxt = findViewById(R.id.registerNumberTxt);
         EditText registerEmailTxt = findViewById(R.id.registerEmailTxt);
         EditText registerPasswordTxt = findViewById(R.id.registerPasswordTxt);
         EditText registerPasswordCnfTxt = findViewById(R.id.registerPasswordCnfTxt);
@@ -31,19 +31,19 @@ public class RegisterActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String firstName = registerFirstNameTxt.getText().toString();
-                String lastName = registerLastNameTxt.getText().toString();
+                String fullName = registerFullNameTxt.getText().toString();
+                String number = registerNumberTxt.getText().toString();
                 String email = registerEmailTxt.getText().toString();
                 String password = registerPasswordTxt.getText().toString();
                 String passwordCnf = registerPasswordCnfTxt.getText().toString();
 
-                if (!firstName.equals("") && !lastName.equals("") && !email.equals("") && !password.equals("") && password.equals(passwordCnf)) {
+                if (!fullName.equals("") && !number.equals("") && !email.equals("") && !password.equals("") && password.equals(passwordCnf)) {
                     mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                registerFirstNameTxt.setText("");
-                                registerLastNameTxt.setText("");
+                                registerFullNameTxt.setText("");
+                                registerNumberTxt.setText("");
                                 registerEmailTxt.setText("");
                                 registerPasswordTxt.setText("");
                                 registerPasswordCnfTxt.setText("");

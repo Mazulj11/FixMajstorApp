@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#EFEDE3"
-    android:backgroundTintMode="screen"
+    android:background="#EFEDE3"
     android:focusable="auto"
     android:hapticFeedbackEnabled="true"
     android:visibility="visible"
@@ -23,10 +22,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="416dp"
-        android:layout_height="426dp"
+        android:layout_width="410dp"
+        android:layout_height="453dp"
         app:cardBackgroundColor="#FFDF2B"
-        app:cardCornerRadius="25dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +34,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="407dp"
             android:layout_margin="20dp"
             android:elevation="8dp"
             android:gravity="center"
@@ -78,7 +77,8 @@
                 android:layout_marginTop="15dp"
                 android:background="@drawable/rounded_edittext_white"
                 android:hint="Enter email"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/loginPasswordTxt"
@@ -87,7 +87,8 @@
                 android:layout_marginTop="15dp"
                 android:background="@drawable/rounded_edittext_white"
                 android:hint="Enter password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:padding="15dp" />
 
             <Button
                 android:id="@+id/loginBtn"
@@ -99,32 +100,37 @@
                 android:text="Prijavi se"
                 android:textAlignment="center"
                 android:textColor="#FFDF2B"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 app:cornerRadius="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="66dp"
+                android:orientation="horizontal"
+                android:textAlignment="viewStart">
 
                 <TextView
                     android:id="@+id/textView6"
-                    android:layout_width="190dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="187dp"
+                    android:layout_height="38dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif"
                     android:text="Nemaš račun?"
                     android:textAlignment="viewEnd" />
 
-                <TextView
+                <Button
+                    android:id="@+id/createNewBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#00FFFFFF"
                     android:fontFamily="sans-serif"
                     android:text="Napravi novi."
-                    android:textStyle="bold" />
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:translationX="-10dp" />
+
             </LinearLayout>
 
         </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.advertisementapp;
+package com.example.fixmajstorapp;
 
 import org.junit.Test;
 
