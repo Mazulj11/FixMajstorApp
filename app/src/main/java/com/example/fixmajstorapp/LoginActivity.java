@@ -1,5 +1,8 @@
 package com.example.fixmajstorapp;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,10 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.fixmajstorapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -43,9 +42,10 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(getBaseContext(), "Welcome, You are login", Toast.LENGTH_SHORT).show();
-//                                Intent movieIntent = new Intent(LoginActivity.this, MovieActivity.class);
-//                                startActivity(movieIntent);
+                                Toast.makeText(getBaseContext(), "Welcome, You are logged in", Toast.LENGTH_SHORT).show();
+                                Intent homeIntent = new Intent(LoginActivity.this, HomeActivity.class);
+                                startActivity(homeIntent);
+                                finish();
                             } else {
                                 Toast.makeText(getBaseContext(), "Incorrect user data.", Toast.LENGTH_SHORT).show();
                             }
