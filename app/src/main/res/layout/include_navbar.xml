@@ -27,12 +27,14 @@
             android:padding="10dp"
             android:src="@drawable/logo_yellow" />
 
-        <ImageView
-            android:id="@+id/imageView5"
+        <ImageButton
+            android:id="@+id/notificationBtn"
             android:layout_width="150dp"
             android:layout_height="109dp"
             android:layout_weight="1"
             android:padding="13dp"
+            android:scaleType="fitCenter"
+            android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/notification" />
 
     </LinearLayout>
