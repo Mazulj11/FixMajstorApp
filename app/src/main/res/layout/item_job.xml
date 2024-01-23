@@ -15,7 +15,6 @@
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -82,10 +81,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:scaleType="centerInside"
                 android:adjustViewBounds="true"
                 android:background="@drawable/rounded_edittext_white"
                 android:padding="5dp"
+                android:scaleType="centerInside"
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
