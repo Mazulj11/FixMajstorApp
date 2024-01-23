@@ -17,27 +17,26 @@
 
         <include layout="@layout/include_navbar" />
 
-<<<<<<< HEAD
-        <include layout="@layout/include_bar_active_history" />
-
-=======
->>>>>>> origin/job-page-functionality
-
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-<<<<<<< HEAD
-=======
             android:layout_marginTop="15dp"
->>>>>>> origin/job-page-functionality
             android:layout_marginBottom="10dp"
             android:text="Rezervirani poslovi"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <include
-            layout="@layout/include_bottom_menu"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/jobListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/include_bottom_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include layout="@layout/include_bottom_menu" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
