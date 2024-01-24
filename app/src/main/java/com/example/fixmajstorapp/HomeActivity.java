@@ -1,21 +1,19 @@
 package com.example.fixmajstorapp;
 
-<<<<<<< HEAD
-=======
+
 import android.annotation.SuppressLint;
->>>>>>> origin/job-page-functionality
+
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-<<<<<<< HEAD
-=======
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
->>>>>>> origin/job-page-functionality
+
 public class HomeActivity extends AppCompatActivity {
 
     @Override
@@ -23,8 +21,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-<<<<<<< HEAD
-=======
+
         ImageButton openJobsBtn = findViewById(R.id.openJobsBtn);
         openJobsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
->>>>>>> origin/job-page-functionality
+
 
     }
 }

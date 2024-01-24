@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -33,19 +35,26 @@ public class JobActivity extends AppCompatActivity {
                 .setQuery(mDatabase.getReference("jobs"), Job.class)
                 .build();
 
-
         this.jobAdapter = new JobAdapter(options);
         this.recyclerView.setAdapter(this.jobAdapter);
 
-//        FloatingActionButton openAddMovieBtn = findViewById(R.id.openAddMovieBtn);
-//        openAddMovieBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(MovieActivity.this, AddMovieActivity.class);
-//                startActivity(i);
-//            }
-//        });
+        Button openAddJobsBtn = findViewById(R.id.openAddJobBtn);
+        openAddJobsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registerIntent = new Intent(JobActivity.this, AddJobActivity.class);
+                startActivity(registerIntent);
+            }
+        });
 
+        ImageButton openHomeBtn = findViewById(R.id.homeBtn);
+        openHomeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registerIntent = new Intent(JobActivity.this, HomeActivity.class);
+                startActivity(registerIntent);
+            }
+        });
     }
 
     @Override

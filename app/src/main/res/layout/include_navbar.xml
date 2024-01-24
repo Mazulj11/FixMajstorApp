@@ -34,8 +34,9 @@
             android:layout_weight="1"
             android:padding="13dp"
             android:scaleType="fitCenter"
-            android:background="?android:attr/selectableItemBackground"
-            android:src="@drawable/notification" />
+
+            android:background="?android:attr/selectableItemBackground" />
+
 
     </LinearLayout>
 
