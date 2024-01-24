@@ -43,9 +43,10 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(getBaseContext(), "Welcome, You are login", Toast.LENGTH_SHORT).show();
-//                                Intent movieIntent = new Intent(LoginActivity.this, MovieActivity.class);
-//                                startActivity(movieIntent);
+                                Toast.makeText(getBaseContext(), "Welcome, You are logged in", Toast.LENGTH_SHORT).show();
+                                Intent homeIntent = new Intent(LoginActivity.this, HomeActivity.class);
+                                startActivity(homeIntent);
+                                finish();
                             } else {
                                 Toast.makeText(getBaseContext(), "Incorrect user data.", Toast.LENGTH_SHORT).show();
                             }
