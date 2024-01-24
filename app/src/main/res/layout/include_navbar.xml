@@ -34,7 +34,9 @@
             android:layout_weight="1"
             android:padding="13dp"
             android:scaleType="fitCenter"
+
             android:background="?android:attr/selectableItemBackground" />
+
 
     </LinearLayout>
 
