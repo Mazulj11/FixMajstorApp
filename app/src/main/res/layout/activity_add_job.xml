@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEDE3">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/include_navbar" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="Dodaj novi posao"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView8"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/nazivPoslaLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:text="Naziv posla:"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/professionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/nazivPoslaLabel"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_white"
+                android:inputType="text"
+                android:padding="15dp" />
+
+            <TextView
+                android:id="@+id/imeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressEditText"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="15dp"
+                android:text="Ime i prezime:"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/fullnameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/imeLabel"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_white"
+                android:inputType="text"
+                android:padding="15dp" />
+
+            <TextView
+                android:id="@+id/lokacijaLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/professionEditText"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="15dp"
+                android:text="Lokacija:"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/locationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/lokacijaLabel"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_white"
+                android:inputType="text"
+                android:padding="15dp" />
+
+            <TextView
+                android:id="@+id/adresaLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/locationEditText"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="15dp"
+                android:text="Adresa:"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/addressEditText"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/adresaLabel"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_edittext_white"
+                android:inputType="text"
+                android:padding="15dp" />
+
+            <Button
+                android:id="@+id/selectImageBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressEditText"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/yellow"
+                android:paddingLeft="15dp"
+                android:text="Dodaj sliku"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imagePreview"
+                android:layout_width="200dp"
+                android:layout_height="175dp"
+                android:layout_below="@id/selectImageBtn"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray"
+                android:contentDescription="Slika"
+                android:foreground="@android:drawable/ic_menu_upload"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imagePreview"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/yellow"
+                android:paddingLeft="15dp"
+                android:text="Dodaj posao"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/include_bottom_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
