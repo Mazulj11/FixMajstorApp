@@ -27,7 +27,7 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="277dp"
-            android:src="@drawable/logo" />
+            android:src="@drawable/brownonbeige" />
 
         <TextView
             android:id="@+id/textView4"

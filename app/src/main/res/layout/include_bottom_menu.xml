@@ -13,13 +13,17 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
+
             android:id="@+id/openJobsBtn"
+
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
+
             android:contentDescription="Activity"
+
             android:scaleType="fitCenter"
             android:src="@drawable/activity" />
 
@@ -31,7 +35,9 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
+
             android:contentDescription="Home"
+
             android:scaleType="fitCenter"
             android:src="@drawable/home" />
 
@@ -42,7 +48,9 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
+
             android:contentDescription="Profile"
+
             android:scaleType="fitCenter"
             android:src="@drawable/profile" />
     </LinearLayout>
