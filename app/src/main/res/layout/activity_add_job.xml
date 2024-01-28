@@ -151,6 +151,19 @@
                 android:scaleType="centerCrop" />
 
             <Button
+                android:id="@+id/uploadImageBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imagePreview"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/yellow"
+                android:paddingLeft="15dp"
+                android:text="Spremi sliku"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <Button
                 android:id="@+id/saveBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
