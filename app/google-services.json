@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "126310454267",
+    "firebase_url": "https://advertisementapp-e50f9-default-rtdb.firebaseio.com",
     "project_id": "advertisementapp-e50f9",
     "storage_bucket": "advertisementapp-e50f9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:126310454267:android:e9a19300ee0a66a07fb15e",
+        "mobilesdk_app_id": "1:126310454267:android:80969b3b4b01587b7fb15e",
         "android_client_info": {
           "package_name": "com.example.fixmajstorapp"
         }

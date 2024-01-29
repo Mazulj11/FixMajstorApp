@@ -18,6 +18,9 @@
         <include layout="@layout/include_navbar" />
 
 
+        <include layout="@layout/include_bar_active_history" />
+
+
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
