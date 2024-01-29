@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -15,11 +16,12 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
@@ -37,6 +39,7 @@ public class AddJobActivity extends AppCompatActivity {
 
     Button selectImageBtn;
     Button saveBtn;
+    Button uploadImageBtn;
     ImageView imagePreview;
 
     FirebaseStorage storage;
@@ -52,6 +55,7 @@ public class AddJobActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_job);
         this.selectImageBtn = findViewById(R.id.selectImageBtn);
         this.saveBtn = findViewById(R.id.saveBtn);
+        this.uploadImageBtn = findViewById(R.id.uploadImageBtn);
         this.imagePreview = findViewById(R.id.imagePreview);
 
         this.storage = FirebaseStorage.getInstance();
@@ -61,6 +65,12 @@ public class AddJobActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 selectImage();
+            }
+        });
+        uploadImageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uploadImage();
             }
         });
 
@@ -76,7 +86,6 @@ public class AddJobActivity extends AppCompatActivity {
         EditText locationEditTxt = findViewById(R.id.locationEditText);
         EditText addressEditTxt = findViewById(R.id.addressEditText);
 
-//        Button movieSaveBtn = findViewById(R.id.saveMovieBtn);
 
         DatabaseReference jobsReference = mDatabase.getReference("/jobs");
 
@@ -141,33 +150,41 @@ public class AddJobActivity extends AppCompatActivity {
         );
     }
 
-    private void uploadImage () {
+    private void uploadImage() {
         if (filePath != null) {
             ProgressDialog progressDialog = new ProgressDialog(this);
             progressDialog.setTitle("Učitavam sliku");
             progressDialog.show();
-            StorageReference ref = storageReference.child("images/"
-                    + UUID.randomUUID().toString()
-            );
-            ref.putFile(filePath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    progressDialog.hide();
-                    Toast.makeText(
-                            getApplicationContext(),
-                            "Slika je učitana na server",
-                            Toast.LENGTH_LONG).show();
-                    ref.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+            StorageReference ref = storageReference.child("images/" + UUID.randomUUID().toString());
+
+
+            ref.putFile(filePath)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
-                        public void onComplete(@NonNull Task<Uri> task) {
-                            jobImage = task.getResult().toString();
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            // Upload success, retrieve download URL
+                            ref.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Uri> task) {
+                                    if (task.isSuccessful()) {
+                                        jobImage = task.getResult().toString();
+                                        // Continue with your logic here
+                                    } else {
+                                        // Handle failure to get download URL
+                                        Toast.makeText(getApplicationContext(), "Error getting download URL", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Handle failure to upload
+                            Toast.makeText(getApplicationContext(), "Error uploading image", Toast.LENGTH_LONG).show();
                         }
                     });
-                }
-            });
-
-
-
         }
     }
+
 }
