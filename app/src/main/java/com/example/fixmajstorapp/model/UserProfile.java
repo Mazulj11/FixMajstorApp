@@ -5,15 +5,18 @@ public class UserProfile {
     private String email;
     private String adresa;
     private String lokacija;
-    private Integer tel;
+    private String tel;
     private String imagePath;
-    
 
-    public UserProfile(String imePrezime, String email, String adresa, String lokacija, Integer tel) {
+    public UserProfile() {
+    }
+
+    public UserProfile(String imePrezime, String email, String adresa, String lokacija, String tel) {
         this.imePrezime = imePrezime;
         this.email = email;
         this.adresa = adresa ;
         this.lokacija = lokacija;
+        this.tel = tel;
     }
 
     public String getImePrezime() {
@@ -48,16 +51,17 @@ public class UserProfile {
         this.lokacija = lokacija;
     }
 
-    public Integer getTel() {
+    public String getTel() {
         return tel;
     }
 
-    public void setTel(Integer tel) {
+    public void setTel(String tel) {
         this.tel = tel;
     }
     public String getImagePath() {
         return imagePath;
     }
+
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
     }
