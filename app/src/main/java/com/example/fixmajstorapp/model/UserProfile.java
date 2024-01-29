@@ -6,6 +6,7 @@ public class UserProfile {
     private String adresa;
     private String lokacija;
     private Integer tel;
+    private String imagePath;
     
 
     public UserProfile(String imePrezime, String email, String adresa, String lokacija, Integer tel) {
@@ -53,5 +54,11 @@ public class UserProfile {
 
     public void setTel(Integer tel) {
         this.tel = tel;
+    }
+    public String getImagePath() {
+        return imagePath;
+    }
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }
